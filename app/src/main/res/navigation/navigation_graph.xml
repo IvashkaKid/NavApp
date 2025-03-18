@@ -12,13 +12,7 @@
         tools:layout="@layout/fragment_chats">
         <action
             android:id="@+id/action_chatsFragment_to_chatFragment"
-            app:destination="@id/chatFragment"
-            app:enterAnim="@anim/fade_in_right"
-            app:exitAnim="@anim/fade_out_left"
-            app:popEnterAnim="@anim/fade_in_left"
-            app:popExitAnim="@anim/fade_out_right"
-            app:popUpToInclusive="false" />
-
+            app:destination="@id/chatFragment" />
     </fragment>
 
     <fragment
@@ -31,12 +25,18 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.navapp.SettingsFragment"
         android:label="Настройки"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings">
+    </fragment>
 
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.example.navapp.ChatFragment"
         android:label="Чат"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chatFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+    </fragment>
+
 
 </navigation>
