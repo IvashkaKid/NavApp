@@ -5,8 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.navapp"
-    compileSdk = 34
-
+    compileSdk = 35
     defaultConfig {
         applicationId = "com.example.navapp"
         minSdk = 24
@@ -33,10 +32,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.8.5")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.8.5")
+    implementation ("androidx.fragment:fragment-ktx:1.8.5")
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
